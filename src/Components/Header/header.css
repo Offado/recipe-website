@@ -2,7 +2,7 @@
   background: white;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   width: 100%;
 }
@@ -44,3 +44,31 @@ span {
 span:hover {
     color:coral;
 }
+
+.menu {
+  height: 32px;
+  width: 35px;
+  background: white;
+  position: relative;
+  .bar {
+    border-radius: 5px;
+    height: 6px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    &:nth-child(1){
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+  }
+}
+
+
+
