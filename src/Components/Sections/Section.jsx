@@ -4,7 +4,7 @@ import "./section.css";
 
 const Section = () => {
   return (
-    <section id="footer">
+    <section id="section">
       Section
     </section>
   );

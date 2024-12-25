@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: white;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    .link {
+        display: flex;
+        padding: .5em 1em;
+        border-left: .4em solid transparent;
+        margin-bottom: 1em;
+        gap: 0 20px;
+        list-style: none;
+        text-decoration: none;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #333;
+    }
+}
+
+.link:hover {
+    color: red;
+}
