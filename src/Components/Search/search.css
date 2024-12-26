@@ -1,8 +1,19 @@
 .search {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
-.input-search {
-    
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-form .input-search {
+  width: 500px;
+  padding: 10px 15px;
+  border: 2px solid #333;
+  border-radius: 30px;
+  font-size: 1rem;
 }

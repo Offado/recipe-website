@@ -1,0 +1,46 @@
+#improve {
+  background: white;
+  padding: 100px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.h2 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.btn-primary {
+  background-color: #006400;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) /* #ffffff */;
+  cursor: pointer;
+  margin-top: .75em;
+}
+
+.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: #228b22;
+  cursor: pointer;
+}
+
+.skill {
+    .col.img {
+        img {
+            width: 100%;
+        }
+    }
+    .col.typography {
+        padding-left: 1em;
+        .skills {
+            border-left: .2em solid #006400;
+            margin-bottom: .5em;
+            padding: .1em 0 .1em .5em;
+        }
+    }
+}
