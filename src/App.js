@@ -3,8 +3,8 @@ import FooterPage from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import ImproveSkills from './Components/ImproveSkills/improveSkills';
 import QuoteSection from './Components/QuoteSection/QuoteSection';
-import Search from './Components/Search/Search';
 import Section from './Components/Sections/Section';
+import TopChef from './Components/TopChef/TopChef';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Section />
       <ImproveSkills />
       <QuoteSection />
-      <Search />
+      <TopChef />
       <FooterPage />
     </div>
   );

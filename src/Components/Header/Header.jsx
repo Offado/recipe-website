@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       <div className="container-header">
-        <h1>Restaurant AKAN</h1>
+        <h1>Recettes AKAN</h1>
         <div className="header">
           <ul>
             <li>
@@ -52,8 +52,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/Categorie/Categories" className="link3">
-                <span>Catégories</span>
+              <Link to="/Contact/ContactUs" className="link3">
+                <span>Contact</span>
               </Link>
             </li>
           </ul>

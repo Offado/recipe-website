@@ -1,0 +1,25 @@
+.section.chiefs {
+  background: white;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.h3 {
+  font-size: 2.5em;
+  font-weight: 900;
+  color: black;
+  text-align: center;
+}
+
+.chief-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5em;
+  width: 50%;
+}
