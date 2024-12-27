@@ -2,6 +2,7 @@ import React from "react";
 import "./section.css";
 import { TypeAnimation } from "react-type-animation";
 import Image from "../CustomImage/Image";
+import { useNavigate } from "react-router";
 
 
 const Section = () => {
@@ -17,6 +18,12 @@ const Section = () => {
     "../assets/img8.jpg",
     "../assets/img9.jpg",
   ];
+
+  const navigateSection = useNavigate();
+
+  const handleClick = () => {
+    navigateSection("/Recipes/Recipe")
+  }
 
   return (
     <section id="section" className="hero">
@@ -46,7 +53,7 @@ const Section = () => {
           territoire ivoirien, nous sommes réputés pour le bieukosseu, kédjénou,
           foufou et plein d'autres plats vous attendent.
         </p>
-        <button className="btn btn-primary">Explorez maintenant</button>
+        <button onClick={handleClick} className="btn btn-primary">Explorez maintenant</button>
       </div>
       <div className="col gallery">
         {images.map((src, index) => (
