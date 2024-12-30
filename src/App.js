@@ -9,7 +9,7 @@ import TopChef from './Components/TopChef/TopChef';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header /> 
       <Section />
       <ImproveSkills />
       <QuoteSection />

@@ -51,11 +51,6 @@ const Header = () => {
                 <span>Recettes</span>
               </Link>
             </li>
-            <li>
-              <Link to="/Contact/ContactUs" className="link3">
-                <span>Contact</span>
-              </Link>
-            </li>
           </ul>
         </div>
         <div
