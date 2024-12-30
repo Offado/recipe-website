@@ -1,6 +1,5 @@
 .search {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 50px;
 }
 
 form {
@@ -10,10 +9,52 @@ form {
   margin-top: 30px;
 }
 
-.search-form .input-search {
+.search-form input {
   width: 500px;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border: 2px solid #333;
-  border-radius: 30px;
   font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-search{
+  background: green;
+  padding: 9px 15px;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.search-form {
+  background: white;
+  padding: 50px;
+  height: 100;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  display: block;
+  align-items: center;
+  h2 {
+    color: black;
+    margin-bottom: 0.5em;
+  }
+  .search-recipe {
+    .search-item {
+      background-color: coral;
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin: 0 0.5em 1em 0;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .search-item:hover {
+      background-color: orangered;
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin: 0 0.5em 1em 0;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
 }
