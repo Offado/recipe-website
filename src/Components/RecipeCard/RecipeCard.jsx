@@ -7,12 +7,12 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className="recipe-card-container">
       <div className="card-items">
-        <h3>{recipe.name}</h3>
+        <h3>{recipe.strMeal}</h3>
         <div className="description-card">
           <div className="card-image">
-            <Image imgSrc={recipe.image} pt="70%" />
+            <Image imgSrc={recipe.strMealThumb} pt="70%" />
           </div>
-          <p>{recipe.description}</p>
+          <p>{recipe.strInstructions}</p>
           <Link to={`/Details/Detail/${recipe.id}`} className="link-card">
             <span className="card-span">Découvre la recette</span>
           </Link>
