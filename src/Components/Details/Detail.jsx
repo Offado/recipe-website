@@ -21,7 +21,7 @@ const Detail = () => {
 
   useEffect(() => {
     fetchRecipeDetails();
-  }, []);
+  });
 
   return (
     <section id="details" className="skill">

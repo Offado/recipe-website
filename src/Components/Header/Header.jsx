@@ -4,7 +4,6 @@ import { Link } from "react-router";
 import Menu from "../SideBar/Menu";
 import { FaHome } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
-import { BiSolidCategory } from "react-icons/bi";
 
 
 const Header = () => {

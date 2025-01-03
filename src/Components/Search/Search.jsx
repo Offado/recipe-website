@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./search.css";
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
-import Recipe from "../Recipes/Recipe";
 import { Link } from "react-router";
 
 const Search = () => {
@@ -35,7 +34,6 @@ const Search = () => {
     fetchData();
   }, []);
 
-  
   return (
     <div className="search">
       <div className="search-form">
@@ -55,21 +53,22 @@ const Search = () => {
         {loading && <p>Chargement...</p>}
         {err && <p>{err}</p>}
         <div>
-          {
-            listRecipe.filter((item) => {
-              if(searchTerm === ""){
+          {listRecipe
+            // eslint-disable-next-line array-callback-return
+            .filter((item)=>{
+              if (searchTerm === "") {
                 return item;
-              }
-              else if(item.strMeal.toLowerCase().includes(searchTerm.toLowerCase())){
+              } else if (
+                item.strMeal.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
                 return item;
               }
             })
             .map((item) => (
-              <Link>
-                <p className="recipe-item" key={item.idMeal}>{item.strMeal}</p>
-              </Link>
-            ))
-          }
+              <p className="recipe-item" key={item.idMeal}>
+                <Link to={`/Details/Detail/${item.id}`}>{item.strMeal}</Link>
+              </p>
+            ))}
         </div>
       </div>
     </div>
