@@ -1,15 +1,44 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card image */
+
+.card-items {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card-recipe {
+  display: grid;
+  row-gap: 2.5rem;
+}
+
 .card-image {
-  height: 70%;
-  width: 100%;
   position: relative;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-  }
+}
+
+.card-img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.card-data {
+  text-align: center;
+}
+
+.card-category {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: green;
 }
 
 .link-card {
@@ -17,16 +46,11 @@
 }
 
 .card-span {
-  color: black;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 300;
+  font-size: 1rem;
+  color: #333;
 }
 
-h3 {
-  font-size: 1.7em;
+.card-span:hover {
+  color: coral;
 }
 
-.img {
-  object-fit: cover;
-}

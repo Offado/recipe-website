@@ -57,3 +57,7 @@ form {
     }
   }
 }
+
+.recipe-item {
+  text-align: center;
+}

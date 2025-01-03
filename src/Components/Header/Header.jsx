@@ -23,11 +23,6 @@ const Header = () => {
       path: "/Recipes/Recipe",
       icon: <FaList />
     },
-    {
-      name: "Catégories",
-      path: "/Categorie/Categories",
-      icon: <BiSolidCategory />
-    },
   ];
 
   // Fonction pour fermer le menu sideBar
@@ -43,12 +38,12 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/" className="link1">
-                <span>Accueil</span>
+                <span className="span-header">Accueil</span>
               </Link>
             </li>
             <li>
               <Link to="/Recipes/Recipe" className="link2">
-                <span>Recettes</span>
+                <span className="span-header">Recettes</span>
               </Link>
             </li>
           </ul>

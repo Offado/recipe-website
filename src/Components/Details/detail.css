@@ -11,32 +11,15 @@
   text-align: center;
   align-items: center;
   margin-bottom: 1em;
+  .col {
+    width: 50%;
+  }
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .h4 {
   font-size: 2em;
-}
-
-.col.detail-image {
-  width: 100%;
-  img {
-    width: 30%;
-    height: 100%;
-    border-radius: 5px;
-  }
-}
-
-.ingredients p {
-    gap: 50px;
-}
-
-.timing {
-    margin: 35px;
-    color: red;
-    font-size: 1.3em;
-}
-
-.timing b {
-    color: #333;
-    font-size: 0.9em;
 }
