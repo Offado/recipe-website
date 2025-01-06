@@ -9,12 +9,9 @@ const RecipeCard = ({ recipe }) => {
         <h3 className="card-title">{recipe.strMeal}</h3>
         <div className="card-recipe">
           <div className="card-image">
-            <img src={recipe.strMealThumb} className="card-img" alt="" />
+            <img src={recipe.strMealThumb} className="card-img" alt="image-recipes" />
           </div>
           <div className="card-data">
-            <div className="card-data-description">
-              <span className="card-category">{recipe.strCategory}</span>
-            </div>
             <Link to={`/Details/Detail/${recipe.id}`} className="link-card">
               <span className="card-span">Découvre la recette</span>
             </Link>

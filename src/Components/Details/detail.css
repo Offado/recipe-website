@@ -10,10 +10,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-bottom: 1em;
-  .col {
-    width: 50%;
-  }
+  margin-bottom: 1.5em;
 }
 
 h3 {

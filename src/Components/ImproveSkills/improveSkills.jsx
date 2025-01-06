@@ -14,10 +14,10 @@ const ImproveSkills = () => {
 
   return (
     <section id="improve" className="skill">
-      <div className="col img">
-        <img src="../assets/spécialité.jpg" alt="" />
+      <div className="img">
+        <img src="../assets/img8.jpg" alt="" />
       </div>
-      <div className="col typography">
+      <div className="typography">
         <h1 className="h2">Améliorer vos compétences culinaires</h1>
         { list.map((item, index) => (
           <p className="skills" key={index}>{item}</p>

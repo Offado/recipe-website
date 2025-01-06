@@ -18,7 +18,7 @@ const Search = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://api.freeapi.app/api/v1/public/meals"
+        "https://api.freeapi.app/api/v1/public/meals?page=1&limit=21"
       );
       console.log(response.data.data.data); // Met à jour les données recettes
       setListRecipe(response.data.data.data); // Initialise les recettes filtrées
@@ -52,8 +52,9 @@ const Search = () => {
         {/* Affichage des recettes */}
         {loading && <p>Chargement...</p>}
         {err && <p>{err}</p>}
-        <div>
-          {listRecipe
+        <div className="list-recipes">
+          {searchTerm &&
+          listRecipe
             // eslint-disable-next-line array-callback-return
             .filter((item)=>{
               if (searchTerm === "") {
@@ -66,7 +67,7 @@ const Search = () => {
             })
             .map((item) => (
               <p className="recipe-item" key={item.idMeal}>
-                <Link to={`/Details/Detail/${item.id}`}>{item.strMeal}</Link>
+                <Link className="link-item-recipe" to={`/Details/Detail/${item.id}`}>{item.strMeal}</Link>
               </p>
             ))}
         </div>

@@ -17,9 +17,9 @@ const Recipe = () => {
   const fetchRecipes = async () => {
     try {
       const response = await axios.get(
-        "https://api.freeapi.app/api/v1/public/meals"
+        "https://api.freeapi.app/api/v1/public/meals?page=1&limit=21"
       );
-      setRecipes(response.data.data.data);
+      setRecipes(response.data.data.data); // Met à jour les recettes
     } catch (error) {
       setErr("Erreur de récupération des recettes", error);
     } finally {
@@ -28,7 +28,7 @@ const Recipe = () => {
   };
 
   useEffect(() => {
-    fetchRecipes();
+    fetchRecipes(); // Initialise les recettes
   }, []);
 
   return (
@@ -41,7 +41,7 @@ const Recipe = () => {
         <Search />
       </div>
       <div className="recipe-card items">
-        {loading && <p>chargement...</p>}
+        {loading && <p>Veuillez patienter pour le chargement...</p>}
         {err && <p>{err}</p>}
         {recipes.map((recipe, index) => (
           <RecipeCard key={index} recipe={recipe} />

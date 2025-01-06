@@ -1,10 +1,11 @@
 import React from "react";
+import "./chiefCard.css";
 
 const ChiefCard = ({chief}) => {
   return (
     <div className="chief-card">
       <div className="chief-card-image">
-        <img src={chief.img} alt="" />
+        <img src={chief.img} className="card-img-chief" alt="" />
       </div>
       <div className="chief-card-info">
         <h3 className="chief-card-name">{chief.name}</h3>

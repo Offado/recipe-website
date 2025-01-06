@@ -1,9 +1,9 @@
 .chief-card-image {
     display: flex;
-    height: 120px;
+    height: 180px;
     img {
         height: 100%;
-        width: 120px;
+        width: 200px;
         border-radius: 5px;
     }
 }

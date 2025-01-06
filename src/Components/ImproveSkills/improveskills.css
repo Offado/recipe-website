@@ -1,12 +1,11 @@
 #improve {
   background: white;
-  padding: 150px;
+  padding: 20px;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
   color: black;
   display: flex;
   align-items: center;
+  margin-bottom: 3.5em;
 }
 
 .h2 {
@@ -20,7 +19,7 @@
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) /* #ffffff */;
   cursor: pointer;
-  margin-top: .75em;
+  margin-top: 0.75em;
 }
 
 .btn-primary:hover {
@@ -29,18 +28,18 @@
   cursor: pointer;
 }
 
-.skill {
-    .col.img {
-        img {
-            width: 100%;
-        }
-    }
-    .col.typography {
-        padding-left: 1em;
-        .skills {
-            border-left: .2em solid #006400;
-            margin-bottom: .5em;
-            padding: .1em 0 .1em .5em;
-        }
-    }
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.typography {
+  padding-left: 1em;
+}
+
+.skills {
+  border-left: 0.2em solid #006400;
+  margin-bottom: 1.5em;
+  padding: 0.1em 0 0.1em 0.5em;
 }

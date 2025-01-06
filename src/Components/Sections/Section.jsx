@@ -1,29 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./section.css";
 import { TypeAnimation } from "react-type-animation";
 import Image from "../CustomImage/Image";
 import { useNavigate } from "react-router";
-
+import axios from "axios";
 
 const Section = () => {
-  // Listes des images
-  const images = [
-    "../assets/img1.jpg",
-    "../assets/img2.jpg",
-    "../assets/img3.jpg",
-    "../assets/img4.jpg",
-    "../assets/img5.jpg",
-    "../assets/img6.jpg",
-    "../assets/img7.jpg",
-    "../assets/img8.jpg",
-    "../assets/img9.jpg",
-  ];
+  // Listes des recettes
+  const [images, setImages] = useState([]);
+  // Etat pour gérer les erreurs
+  const [err, setErr] = useState(null);
+  // Etat pour gérer le chargement
+  const [load, setLoad] = useState(true);
 
+  // Fonction de récupération des images de recettes
+  const fetchImageRecipes = async () => {
+    try {
+      const res = await axios.get(
+        "https://api.freeapi.app/api/v1/public/meals?page=1&limit=9"
+      );
+      setImages(res.data.data.data); // Met les images à jour
+    } catch (error) {
+      setErr("Erreur de récupération de l'image", error);
+    } finally {
+      setLoad(false);
+    }
+  };
+
+  // Récupération des données images
+  useEffect(() => {
+    fetchImageRecipes(); // Initialise les images
+  }, []);
+
+  // Navigation de la page recettes
   const navigateSection = useNavigate();
 
   const handleClick = () => {
-    navigateSection("/Recipes/Recipe")
-  }
+    navigateSection("/Recipes/Recipe");
+  };
 
   return (
     <section id="section" className="hero">
@@ -53,11 +67,15 @@ const Section = () => {
           territoire ivoirien, nous sommes réputés pour le bieukosseu, kédjénou,
           foufou et plein d'autres plats vous attendent.
         </p>
-        <button onClick={handleClick} className="btn btn-primary">Explorez maintenant</button>
+        <button onClick={handleClick} className="btn btn-primary">
+          Explorez maintenant
+        </button>
       </div>
       <div className="col gallery">
-        {images.map((src, index) => (
-          <Image key={index} imgSrc={src} pt={"85%"} />
+        {load && <p>Un instant...</p>}
+        {err && <p>{err}</p>}
+        {images.map((image, index) => (
+          <Image key={index} imgSrc={image} pt="85%" />
         ))}
       </div>
     </section>
