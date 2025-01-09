@@ -1,13 +1,13 @@
 #section {
   background: wheat;
-  padding: 40px;
+  padding: 25px;
   height: 100%;
   color: black;
   display: flex;
   align-items: center;
-  margin-bottom: 2.5em;
+  margin-bottom: 1em;
   .col {
-    width: 70%;
+    width: 50%;
   }
 }
 

@@ -31,6 +31,43 @@ const Recipe = () => {
     fetchRecipes(); // Initialise les recettes
   }, []);
 
+  // // Pagination des recettes
+  // const [data, setData] = useState([]); // Données de l'API
+  // const [currentPage, setCurrentPage] = useState(1); // Page actuelle
+  // const [totalPages, setTotalPages] = useState(1); // Nombre de pages
+  // const itemsPerPage = 12; // Nombre de recettes par page
+
+  // // Fonction pour charger les données depuis l'API
+  // const fetchDataPage = async (page) => {
+  //   try {
+  //     const result = await axios.get(
+  //       `https://api.freeapi.app/api/v1/public/meals`,
+  //       {
+  //         params: {
+  //           page: page,
+  //           limit: itemsPerPage,
+  //         },
+  //       }
+  //     );
+  //     setData(result.data.data.data); // données renvoyées
+  //     setTotalPages(result.data.data.totalPages); // renvoie le nombre total des pages
+  //   } catch (error) {
+  //     setErr("Erreur de récupération des pages", error);
+  //   }
+  // };
+
+  // // Récupération des pages de recettes
+  // useEffect(() => {
+  //   fetchDataPage(currentPage);
+  // }, [currentPage]);
+
+  // // Fonction pour changer de pages
+  // const handleChangePage = (page) => {
+  //   if (page >= 1 && page <= totalPages) {
+  //     setCurrentPage(page);
+  //   }
+  // };
+
   return (
     <div>
       <div className="recipe-header">
@@ -41,12 +78,27 @@ const Recipe = () => {
         <Search />
       </div>
       <div className="recipe-card items">
-        {loading && <p>Veuillez patienter pour le chargement...</p>}
+        {loading && <p>Veuillez patienter pour les recettes...</p>}
         {err && <p>{err}</p>}
         {recipes.map((recipe, index) => (
           <RecipeCard key={index} recipe={recipe} />
         ))}
       </div>
+      {/* <div className="recipe-pagination">
+        <ul>
+          {data && data.map((items) => (
+            <li key={items.idMeal}>{items.strMeal}</li>
+          ))}
+        </ul>
+        <div className="pagination-button">
+          <button
+            onClick={() => handleChangePage(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            précédent
+          </button>
+        </div>
+      </div> */}
       <div className="recipe-footer">
         <FooterPage />
       </div>

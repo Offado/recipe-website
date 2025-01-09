@@ -1,9 +1,7 @@
 #details {
   background: white;
-  padding: 90px;
+  padding: 40px;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
   color: black;
   display: flex;
   flex-direction: column;
@@ -13,10 +11,64 @@
   margin-bottom: 1.5em;
 }
 
+h1 {
+  font-size: 4rem;
+  color: black;
+}
+
 h3 {
   font-size: 2rem;
 }
 
 .h4 {
   font-size: 2em;
+}
+
+.pag {
+  display: flex;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+
+.page {
+  display: flex;
+  gap: 30px;
+  font-size: 1.3rem;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+}
+
+.icon-accueil {
+  text-decoration: none;
+}
+
+.a1 {
+  color: #333;
+}
+
+.a1:hover {
+  color: coral;
+}
+
+.iac1 {
+  color: #333;
+}
+
+.icon-recipe {
+  text-decoration: none;
+}
+
+.rec1 {
+  color: #333;
+}
+
+.rec1:hover {
+  color: coral;
+}
+
+.ir1 {
+  color: #333;
 }

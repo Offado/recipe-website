@@ -9,8 +9,6 @@ const Search = () => {
   const [listRecipe, setListRecipe] = useState([]);
   // Etat initial pour gérer les objets
   const [searchTerm, setSearchTerm] = useState("");
-  // Etat de chargement
-  const [loading, setLoading] = useState(true);
   // Etat pour gérer les erreurs
   const [err, setErr] = useState(null);
 
@@ -24,9 +22,7 @@ const Search = () => {
       setListRecipe(response.data.data.data); // Initialise les recettes filtrées
     } catch (error) {
       setErr("Erreur de récupération de recettes", error);
-    } finally {
-      setLoading(false);
-    }
+    } 
   };
 
   // Récupération des données de recettes
@@ -50,7 +46,6 @@ const Search = () => {
           </button>
         </form>
         {/* Affichage des recettes */}
-        {loading && <p>Chargement...</p>}
         {err && <p>{err}</p>}
         <div className="list-recipes">
           {searchTerm &&

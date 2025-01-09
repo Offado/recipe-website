@@ -72,10 +72,10 @@ const Section = () => {
         </button>
       </div>
       <div className="col gallery">
-        {load && <p>Un instant...</p>}
+        {load && <p>Patientez un instant...</p>}
         {err && <p>{err}</p>}
         {images.map((image, index) => (
-          <Image key={index} imgSrc={image} pt="85%" />
+          <Image key={index} imgSrc={image} pt="70%" />
         ))}
       </div>
     </section>

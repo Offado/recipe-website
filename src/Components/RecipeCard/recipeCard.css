@@ -15,7 +15,7 @@ img {
 
 .card-recipe {
   display: grid;
-  row-gap: 2.5rem;
+  row-gap: 1.5rem;
 }
 
 .card-image {
